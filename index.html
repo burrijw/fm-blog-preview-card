@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="styles.css" />
+
+        <title>Frontend Mentor | Blog preview card</title>
+    </head>
+    <body>
+        <!-- Visually hidden H1 to meet HTML validation -->
+        <h1 class="visually-hidden">Blog Preview Card Component</h1>
+        <div class="card">
+            <!-- Image is decorative, leaving the alt empty -->
+            <img
+                class="card__image"
+                src="./assets/images/illustration-article.svg"
+                alt=""
+            />
+            <div class="card-body">
+                <a
+                    class="card__title"
+                    href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+                    target="_blank"
+                >
+                    <h2>HTML & CSS foundations</h2>
+                </a>
+                <p class="card__date">Published 21 Dec 2023</p>
+                <ul class="tags">
+                    <li class="tag">Learning</li>
+                </ul>
+                <p class="card__copy">
+                    These languages are the backbone of every website, defining
+                    structure, content, and presentation.
+                </p>
+            </div>
+            <div class="author-container">
+                <img
+                    class="author-container__image"
+                    src="./assets/images/image-avatar.webp"
+                    alt="headshot of a man against a white brick background"
+                />
+                <p class="author-container__name">Greg Hooper</p>
+            </div>
+        </div>
+
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="https://github.com/burrijw">Josh</a>.
+        </div>
+    </body>
+</html>
