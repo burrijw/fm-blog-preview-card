@@ -143,8 +143,8 @@ body {
     padding: 1.5rem;
 }
 
-a:focus-visible {
-    outline: 2px dashed var(--clr-black);
+a:focus-visible:not(.card) {
+    outline: 2px solid var(--clr-black);
     outline-offset: 3px;
 }
 
@@ -158,15 +158,26 @@ a:focus-visible {
     border-radius: 20px;
     border: 1px var(--clr-black) solid;
     box-shadow: 8px 8px 0px 0px #000;
+    transition: box-shadow 200ms ease-out, transform 200ms ease-out;    
+}
+
+.card:focus-visible {
+    outline: 2px solid var(--clr-black);
+}
+
+.card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 16px 16px 0px 0px #000;
+    transition: box-shadow 200ms ease-out, transform 200ms ease-out;
 }
 
 :is(.card:hover, .card:focus, .card:focus-visible) .card__title {
     color:#f4d04e;  
-    transition: color 150ms ease-out;
+    transition: color 200ms ease-out;
 }
 :is(.card:hover, .card:focus, .card:focus-visible) .card__image {
     opacity: 50%;
-    transition: opacity 150ms ease-out;
+    transition: opacity 200ms ease-out;
 }
 
 .tags {
@@ -201,8 +212,6 @@ a:focus-visible {
     line-height: 1.5;
     order: 3;
 }
-
-
 
 .card__date {
     font-size: 0.75rem;
