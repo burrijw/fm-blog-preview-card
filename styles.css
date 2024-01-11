@@ -155,12 +155,6 @@ body {
     box-shadow: 8px 8px 0px 0px #000;
 }
 
-.card-body {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.75rem;
-}
-
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -181,6 +175,12 @@ body {
     border-radius: 10px;
 }
 
+.card__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.75rem;
+}
+
 .card__title {
     font-size: 20px;
     font-weight: 800;
@@ -190,12 +190,12 @@ body {
 
 .card__title:hover {
     color: var(--clr-yellow);
-    transition: color 0.2s linear;
+    transition: color 150ms linear;
 }
 
 .card__image:has(+ div .card__title:hover) {
     opacity: 50%;
-    transition: opacity 0.2s linear;
+    transition: opacity 150ms linear;
 }
 
 a:focus-visible {
