@@ -188,7 +188,7 @@ body {
     order: 3;
 }
 
-.card__title:hover {
+.card__title:hover, .card__title:focus-visible {
     color: var(--clr-yellow);
     transition: color 150ms linear;
 }
