@@ -143,6 +143,11 @@ body {
     padding: 1.5rem;
 }
 
+a:focus-visible:not(.card) {
+    outline: 2px solid var(--clr-black);
+    outline-offset: 3px;
+}
+
 .card {
     background-color: var(--clr-white, "#FFF");
     display: flex;
@@ -153,6 +158,26 @@ body {
     border-radius: 20px;
     border: 1px var(--clr-black) solid;
     box-shadow: 8px 8px 0px 0px #000;
+    transition: box-shadow 200ms ease-out, transform 200ms ease-out;
+}
+
+.card:focus-visible {
+    outline: 2px solid var(--clr-black);
+}
+
+.card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 16px 16px 0px 0px #000;
+    transition: box-shadow 200ms ease-out, transform 200ms ease-out;
+}
+
+:is(.card:hover, .card:focus, .card:focus-visible) .card__title {
+    color: #f4d04e;
+    transition: color 200ms ease-out;
+}
+:is(.card:hover, .card:focus, .card:focus-visible) .card__image {
+    opacity: 50%;
+    transition: opacity 200ms ease-out;
 }
 
 .tags {
@@ -188,7 +213,7 @@ body {
     order: 3;
 }
 
-.card__title:hover, .card__title:focus-visible {
+.card__title:hover {
     color: var(--clr-yellow);
     transition: color 150ms linear;
 }
